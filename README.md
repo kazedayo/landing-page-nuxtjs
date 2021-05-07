@@ -1,6 +1,6 @@
 # landing-page-nuxtjs
 
-My landing page built using Next.js.
+My landing page built using Nuxt.js.
 
 Deployed on [kazeteitoku.xyz](https://kazeteitoku.xyz)
 
