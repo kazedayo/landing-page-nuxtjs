@@ -1,5 +1,9 @@
 # landing-page-nuxtjs
 
+My landing page built using Next.js.
+
+Deployed on kazeteitoku.xyz
+
 ## Build Setup
 
 ```bash
