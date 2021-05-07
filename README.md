@@ -2,7 +2,7 @@
 
 My landing page built using Next.js.
 
-Deployed on kazeteitoku.xyz
+Deployed on [kazeteitoku.xyz](https://kazeteitoku.xyz)
 
 ## Build Setup
 
