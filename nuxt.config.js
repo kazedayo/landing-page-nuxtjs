@@ -38,13 +38,5 @@ export default {
   modules: ['@nuxt/content'],
 
   // Build Configuration: https://go.nuxtjs.dev/config-build
-  build: {
-    babel: {
-      plugins: [['@babel/plugin-proposal-private-methods', { loose: true }]],
-    },
-  },
-
-  tailwindcss: {
-    jit: true,
-  },
+  build: {},
 }
