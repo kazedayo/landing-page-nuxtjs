@@ -2,7 +2,15 @@
   <div v-if="platform == 'twitter'">
     <a :href="'https://twitter.com/' + rel">
       <div
-        class="w-12 h-12 rounded-full transition-shadow shadow-lg hover:shadow-md bg-blue-400"
+        class="
+          w-12
+          h-12
+          rounded-full
+          transition-shadow
+          shadow-lg
+          hover:shadow-md
+          bg-blue-400
+        "
       >
         <img
           class="container content-center transform scale-50"
@@ -14,7 +22,15 @@
   <div v-else-if="platform == 'github'">
     <a :href="'https://github.com/' + rel">
       <div
-        class="w-12 h-12 rounded-full transition-shadow shadow-lg hover:shadow-md bg-gray-900"
+        class="
+          w-12
+          h-12
+          rounded-full
+          transition-shadow
+          shadow-lg
+          hover:shadow-md
+          bg-gray-900
+        "
       >
         <img
           class="container content-center transform scale-75"
