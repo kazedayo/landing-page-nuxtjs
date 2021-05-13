@@ -17,7 +17,7 @@ jobs:
           script: |
             cd ${{ secrets.REPO_DIRECTORY }}
             git pull
-          script-stop: true
+          script_stop: true
       - name: Build Nuxt.js with Yarn
         uses: appleboy/ssh-action@master
         with:
@@ -28,7 +28,7 @@ jobs:
             cd ${{ secrets.REPO_DIRECTORY }}
             yarn install
             yarn build
-          script-stop: true
+          script_stop: true
       - name: Deploy site with PM2
         uses: appleboy/ssh-action@master
         with:
@@ -38,4 +38,4 @@ jobs:
           script: |
             cd ${{ secrets.REPO_DIRECTORY }}
             pm2 start
-          script-stop: true
+          script_stop: true
