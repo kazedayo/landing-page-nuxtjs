@@ -1,6 +1,10 @@
 name: Deploy to Vultr VPS
 
-on: [push]
+on:
+  push:
+    paths-ignore:
+      - '.github/workflow/**'
+      - '**.md'
 
 jobs:
   deploy:
