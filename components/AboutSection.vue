@@ -2,7 +2,7 @@
   <div class="px-8 md:px-16 py-8 md:py-16">
     <header class="flex-auto flex-col items-center">
       <img
-        src="/images/profile.png"
+        src="/images/profile.jpg"
         class="object-cover w-32 h-32 rounded-full shadow-lg"
         :alt="name"
       />
