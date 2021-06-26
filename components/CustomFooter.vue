@@ -1,6 +1,14 @@
 <template>
   <div
-    class="fixed p-4 bottom-0 inset-x-0 w-full backdrop-filter backdrop-blur"
+    class="
+      fixed
+      p-4
+      bottom-0
+      inset-x-0
+      w-full
+      backdrop-filter backdrop-blur
+      my-safe
+    "
   >
     <p class="text-xs text-center text-gray-400">
       Powered by <a href="https://nuxtjs.org">Nuxt.js</a> &

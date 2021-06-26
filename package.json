@@ -14,8 +14,9 @@
   "dependencies": {
     "@nuxt/content": "^1.14.0",
     "core-js": "^3.9.1",
-    "nuxt": "^2.15.6",
-    "tailwindcss-filters": "^3.0.0"
+    "nuxt": "^2.15.7",
+    "tailwindcss-filters": "^3.0.0",
+    "tailwindcss-safe-area": "^0.2.1"
   },
   "devDependencies": {
     "@babel/eslint-parser": "^7.14.2",
