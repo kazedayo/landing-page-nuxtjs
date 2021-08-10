@@ -13,7 +13,6 @@
   },
   "dependencies": {
     "@nuxt/content": "^1.14.0",
-    "glob-parent": "^6.0.0",
     "core-js": "^3.9.1",
     "nuxt": "^2.15.7",
     "tailwindcss-filters": "^3.0.0",
