@@ -18,7 +18,6 @@ jobs:
           host: ${{ secrets.SERVER_IP }}
           username: ${{ secrets.SERVER_USER }}
           password: ${{ secrets.SSH_USER_PASSWORD }}
-          key: ${{ secrets.SSH_PRIVATE_KEY }}
           script: |
             cd ${{ secrets.REPO_DIRECTORY }}
             git pull
