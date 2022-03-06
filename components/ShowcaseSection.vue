@@ -16,6 +16,35 @@
       />
     </div>
     <h1 class="text-2xl font-bold leading-8">
+      Participated Commerical Projects
+    </h1>
+    <div class="py-2">
+      <div class="py-2">
+        <div class="flex flex-row items-center space-x-2">
+          <h2 class="text-xl font-medium">K11 HK App</h2>
+        </div>
+        <p class="text-gray-400">
+          Mobile Application for K11, a renowed brand of shopping mall in Hong Kong.
+        </p>
+      </div>
+      <div class="py-2">
+        <div class="flex flex-row items-center space-x-2">
+          <h2 class="text-xl font-medium">DPark App</h2>
+        </div>
+        <p class="text-gray-400">
+          Mobile Application for Discovery Park, a shopping mall in Hong Kong.
+        </p>
+      </div>
+      <div class="py-2">
+        <div class="flex flex-row items-center space-x-2">
+          <h2 class="text-xl font-medium">Artisanal Living App</h2>
+        </div>
+        <p class="text-gray-400">
+          Property Management Mobile Application for properties under New World Development brand.
+        </p>
+      </div>
+    </div>
+    <h1 class="text-2xl font-bold leading-8">
       Contributed Open Souce Projects
     </h1>
     <div class="py-2">

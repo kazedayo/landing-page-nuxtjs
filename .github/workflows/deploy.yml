@@ -10,7 +10,7 @@ on:
 jobs:
   deploy:
     runs-on: [ubuntu-latest]
-    steps: 
+    steps:
       - name: Checkout
         uses: actions/checkout@v2
       - name: Push files to server
