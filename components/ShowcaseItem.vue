@@ -12,11 +12,10 @@
 </template>
 
 <script lang="ts">
-import Vue from 'vue'
 import GithubLink from './GithubLink.vue'
 import ImageContainer from './ImageContainer.vue'
 
-export default Vue.extend({
+export default {
   components: { GithubLink, ImageContainer },
   props: {
     title: {
@@ -36,5 +35,5 @@ export default Vue.extend({
       default: '',
     },
   },
-})
+}
 </script>

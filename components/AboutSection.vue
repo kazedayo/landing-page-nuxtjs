@@ -25,9 +25,8 @@
 </template>
 
 <script lang="ts">
-import Vue from 'vue'
 import SocialButton from './SocialButton.vue'
-export default Vue.extend({
+export default {
   components: { SocialButton },
   props: {
     name: {
@@ -39,5 +38,5 @@ export default Vue.extend({
       default: '',
     },
   },
-})
+}
 </script>

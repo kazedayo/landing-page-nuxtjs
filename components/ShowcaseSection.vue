@@ -73,7 +73,7 @@
 <script lang="ts">
 import Vue from 'vue'
 import ShowcaseItem from './ShowcaseItem.vue'
-export default Vue.extend({
+export default {
   components: { ShowcaseItem },
-})
+}
 </script>
