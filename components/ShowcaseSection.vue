@@ -71,7 +71,6 @@
 </template>
 
 <script lang="ts">
-import Vue from 'vue'
 import ShowcaseItem from './ShowcaseItem.vue'
 export default {
   components: { ShowcaseItem },
