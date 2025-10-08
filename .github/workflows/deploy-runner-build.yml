@@ -1,0 +1,65 @@
+name: Deploy (build on runner)
+
+on:
+  workflow_dispatch:
+  push:
+    paths-ignore:
+      - '.github/workflows/**'
+      - '**.md'
+
+jobs:
+  deploy-runner-build:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v2
+
+      - name: Set up Node.js
+        uses: actions/setup-node@v4
+        with:
+          node-version: '22'
+
+      - name: Install dependencies and build
+        run: |
+          corepack enable
+          corepack prepare yarn@4.10.3 --activate
+          yarn -v
+          yarn install --immutable --immutable-cache --check-cache || yarn install
+          yarn build
+
+      - name: Prepare artifact (compiled output)
+        run: |
+          mkdir -p deploy
+          tar -czf deploy/site.tar.gz .output package.json yarn.lock || tar -czf deploy/site.tar.gz .output package.json || tar -czf deploy/site.tar.gz .output
+
+      - name: Upload artifact to server
+        uses: appleboy/scp-action@master
+        with:
+          host: ${{ secrets.SERVER_IP }}
+          username: ${{ secrets.SERVER_USER }}
+          password: ${{ secrets.SSH_USER_PASSWORD }}
+          source: "deploy/site.tar.gz"
+          target: "/tmp/site.tar.gz"
+
+      - name: Deploy on server (extract, install prod deps, restart PM2)
+        uses: appleboy/ssh-action@master
+        with:
+          host: ${{ secrets.SERVER_IP }}
+          username: ${{ secrets.SERVER_USER }}
+          password: ${{ secrets.SSH_USER_PASSWORD }}
+          script: |
+            set -e
+            TARGET_DIR=${{ secrets.REPO_DIRECTORY }}
+            mkdir -p "$TARGET_DIR"
+            tar -xzf /tmp/site.tar.gz -C "$TARGET_DIR"
+            cd "$TARGET_DIR"
+            if [ -f package.json ]; then
+              corepack enable || true
+              yarn install --production --frozen-lockfile || yarn install --production
+            fi
+            if command -v pm2 >/dev/null 2>&1; then
+              pm2 reload all || pm2 start
+            else
+              echo "pm2 not installed on server"
+            fi
+          script_stop: true
