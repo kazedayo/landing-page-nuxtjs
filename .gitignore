@@ -88,3 +88,80 @@ sw.*
 
 # Vim swap files
 *.swp
+
+### General additions for Node / Nuxt projects
+
+# Node modules
+node_modules/
+
+# Yarn v1 integrity
+.yarn-integrity
+
+# Yarn v2/v3 cache and artifacts
+.yarn/**/cache
+.yarn/cache
+.yarn/build-state.yml
+.pnp.*
+
+# Optional npm cache directory
+.npm
+
+# Parcel / Vite / build caches
+.cache/
+/.parcel-cache
+.vite/
+
+# Nuxt build / output (supports both Nuxt 2 and Nuxt 3)
+.nuxt/
+.output/
+dist/
+
+# Next / Vuepress / Serverless etc
+.next/
+.vuepress/dist
+.serverless/
+
+# Static export / generated site
+/.vercel
+/.vercel/output
+/.netlify
+/.netlify/functions
+
+# dotenv environment variables - keep example files
+.env
+.env.*
+!.env.example
+
+# Lockfiles - DO NOT ignore lockfiles generally, but ignore npm shrinkwrap if used
+npm-shrinkwrap.json
+
+# Logs
+/logs
+*.log
+npm-debug.log*
+yarn-debug.log*
+yarn-error.log*
+
+# Coverage and test output
+coverage/
+.nyc_output/
+
+# Build artifacts
+build/
+build/**
+bin/
+
+# OS files
+.DS_Store
+Thumbs.db
+
+# IDEs and editors
+.idea/
+.vscode/
+*.sublime-workspace
+*.sublime-project
+
+# Misc
+.eslintcache
+.node_repl_history
+*.tgz
